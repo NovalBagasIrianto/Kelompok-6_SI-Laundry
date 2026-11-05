@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `transaksi` (
   `tgl_transaksi` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `tgl_selesai` DATETIME NULL,
   `total_harga` DECIMAL(10,2) DEFAULT 0.00,
-  `status_cucian` ENUM('diterima', 'dicuci', 'disetrika', 'selesai', 'diambil') DEFAULT 'diterima',
+  `status_cucian` ENUM('disetujui', 'dicuci', 'disetrika', 'selesai', 'diambil') DEFAULT 'disetujui',
   `status_bayar` ENUM('belum_lunas', 'lunas') DEFAULT 'belum_lunas',
   FOREIGN KEY (`pelanggan_id`) REFERENCES `pelanggan`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE
