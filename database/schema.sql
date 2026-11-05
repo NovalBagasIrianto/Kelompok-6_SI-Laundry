@@ -1,4 +1,4 @@
--- Skema Basis Data Awal Sistem Informasi Laundry (MVP v0.1)
+poekii
 CREATE DATABASE IF NOT EXISTS `si_laundry`;
 USE `si_laundry`;
 
