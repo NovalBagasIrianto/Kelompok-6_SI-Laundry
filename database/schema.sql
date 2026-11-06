@@ -1,4 +1,4 @@
--- Skema Database Sistem Informasi Laundry v0.2 (Revisi Sesuai Kamus Data)
+-- Skema Database Sistem Informasi Laundry v0.2 
 -- Pengelola: Noval (SCM Administrator)
 
 CREATE DATABASE IF NOT EXISTS db_si_laundry;
