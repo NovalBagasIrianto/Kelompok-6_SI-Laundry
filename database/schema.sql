@@ -1,5 +1,6 @@
 -- Draf Skema Database Sistem Informasi Laundry
 -- Pengelola: Noval (SCM Administrator)
+-- Revisi: PEMBAYARAN dan RIWAYAT_STATUS memakai ON DELETE RESTRICT terhadap PESANAN
 
 CREATE DATABASE IF NOT EXISTS db_si_laundry
     DEFAULT CHARACTER SET utf8mb4
@@ -65,7 +66,9 @@ CREATE TABLE PESANAN (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
--- 5. Tabel DETAIL_PESANAN (Anakan Pesanan)
+-- 5. Tabel DETAIL_PESANAN (Anakan Pesanan, entitas lemah)
+-- CASCADE tetap dipakai: rincian item adalah bagian dari nota dan
+-- tidak punya arti tanpa pesanannya.
 -- --------------------------------------------------------
 CREATE TABLE DETAIL_PESANAN (
     id_detail INT AUTO_INCREMENT PRIMARY KEY,
@@ -80,6 +83,8 @@ CREATE TABLE DETAIL_PESANAN (
 
 -- --------------------------------------------------------
 -- 6. Tabel RIWAYAT_STATUS (Anakan Pesanan / Audit Log)
+-- REVISI: id_pesanan dari CASCADE menjadi RESTRICT (catatan audit
+-- tidak boleh ikut hilang bersama pesanan).
 -- --------------------------------------------------------
 CREATE TABLE RIWAYAT_STATUS (
     id_riwayat INT AUTO_INCREMENT PRIMARY KEY,
@@ -87,12 +92,14 @@ CREATE TABLE RIWAYAT_STATUS (
     id_petugas INT NOT NULL,
     status ENUM('Diterima', 'Dicuci', 'Disetrika', 'Selesai', 'Diambil') NOT NULL,
     waktu DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_riwayat_pesanan FOREIGN KEY (id_pesanan) REFERENCES PESANAN(id_pesanan) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_riwayat_pesanan FOREIGN KEY (id_pesanan) REFERENCES PESANAN(id_pesanan) ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_riwayat_petugas FOREIGN KEY (id_petugas) REFERENCES PETUGAS(id_petugas) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 -- 7. Tabel PEMBAYARAN (Anakan Pesanan)
+-- REVISI: id_pesanan dari CASCADE menjadi RESTRICT (catatan uang
+-- tidak boleh ikut terhapus bersama pesanan).
 -- --------------------------------------------------------
 CREATE TABLE PEMBAYARAN (
     id_pembayaran INT AUTO_INCREMENT PRIMARY KEY,
@@ -101,6 +108,6 @@ CREATE TABLE PEMBAYARAN (
     tgl_bayar DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     jumlah DECIMAL(10,2) NOT NULL,
     metode ENUM('Tunai', 'Transfer') NOT NULL DEFAULT 'Tunai',
-    CONSTRAINT fk_pembayaran_pesanan FOREIGN KEY (id_pesanan) REFERENCES PESANAN(id_pesanan) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_pembayaran_pesanan FOREIGN KEY (id_pesanan) REFERENCES PESANAN(id_pesanan) ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_pembayaran_petugas FOREIGN KEY (id_petugas) REFERENCES PETUGAS(id_petugas) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
