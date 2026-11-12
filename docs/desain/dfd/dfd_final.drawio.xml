@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="3">
+  <diagram name="DFD Context" id="0d_CsdT6ARgAfWMKKHpO">
+    <mxGraphModel dx="2390" dy="1004" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ctitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;align=center;" value="DFD CONTEXT — SISTEM INFORMASI LAUNDRY" vertex="1">
+          <mxGeometry height="45" width="900" x="420" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="C_KASIR" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" value="Kasir" vertex="1">
+          <mxGeometry height="70" width="180" x="90" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="C_PEMILIK" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" value="Pemilik" vertex="1">
+          <mxGeometry height="70" width="180" x="90" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="C_PELANGGAN" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" value="Pelanggan" vertex="1">
+          <mxGeometry height="70" width="180" x="1450" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="C_SYS" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;" value="0&lt;br&gt;Sistem Informasi Laundry" vertex="1">
+          <mxGeometry height="130" width="330" x="700" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="c01" edge="1" parent="1" source="C_KASIR" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="C_SYS" value="Data login, pelanggan, pesanan, status, pembayaran, permintaan laporan hari ini">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c02" edge="1" parent="1" source="C_SYS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="C_KASIR" value="Hasil login dan menu, hasil pencarian pelanggan, nota/total/estimasi, hasil status, sisa tagihan/status lunas, laporan hari ini">
+          <mxGeometry relative="1" x="-0.2335" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="60" y="420" />
+              <mxPoint x="60" y="255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c03" edge="1" parent="1" source="C_PEMILIK" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="C_SYS" value="Data login/akun petugas, data pelanggan/pencarian, layanan/harga, permintaan laporan/periode">
+          <mxGeometry relative="1" x="-0.1688" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c04" edge="1" parent="1" source="C_SYS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="C_PEMILIK" value="Hasil login/pengelolaan akun, informasi pelanggan, hasil pengelolaan layanan, laporan transaksi">
+          <mxGeometry relative="1" x="-0.2353" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="180" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c05" edge="1" parent="1" source="C_PELANGGAN" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="C_SYS" value="Informasi cucian dan permintaan melalui Kasir">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1240" y="420" />
+              <mxPoint x="1240" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c06" edge="1" parent="1" source="C_SYS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="C_PELANGGAN" value="Nota melalui Kasir">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1250" y="470" />
+              <mxPoint x="1250" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c_note" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Catatan:&lt;/b&gt; Pelanggan bukan pengguna aplikasi. Panah menunjukkan asal informasi dan penerimaan nota melalui pelayanan Kasir, bukan login atau akses langsung." vertex="1">
+          <mxGeometry height="55" width="1500" x="90" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="c_note2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Keseimbangan Context:&lt;/b&gt; Seluruh pertukaran data eksternal merupakan ringkasan alur Kasir, Pemilik, dan Pelanggan pada DFD Level 0." vertex="1">
+          <mxGeometry height="40" width="1500" x="90" y="970" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="DFD Level 0" id="wUr5QEWYUS4Z9A8sXj5J">
+    <mxGraphModel dx="4494" dy="2464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title0" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;align=center;" value="DFD LEVEL 0 — SISTEM INFORMASI LAUNDRY" vertex="1">
+          <mxGeometry height="40" width="850" x="520" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle0" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="Entitas luar • 7 proses • 6 data store | Berdasarkan Kamus Bersama dan SRS Ringkas" vertex="1">
+          <mxGeometry height="28" width="950" x="700" as="geometry" />
+        </mxCell>
+        <mxCell id="E1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Kasir" vertex="1">
+          <mxGeometry height="55" width="150" x="40" y="157.5" as="geometry" />
+        </mxCell>
+        <mxCell id="E2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Pemilik" vertex="1">
+          <mxGeometry height="55" width="150" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="E3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Pelanggan" vertex="1">
+          <mxGeometry height="55" width="150" x="40" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="P1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="1.0&lt;br&gt;Kelola Akun dan Login" vertex="1">
+          <mxGeometry height="90" width="210" x="330" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="P2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="2.0&lt;br&gt;Kelola Data Pelanggan" vertex="1">
+          <mxGeometry height="90" width="210" x="700" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="P3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="3.0&lt;br&gt;Kelola Layanan dan Harga" vertex="1">
+          <mxGeometry height="90" width="210" x="1070" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="P4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="4.0&lt;br&gt;Proses Pesanan dan Nota" vertex="1">
+          <mxGeometry height="90" width="210" x="330" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="P5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="5.0&lt;br&gt;Perbarui dan Lacak Status" vertex="1">
+          <mxGeometry height="90" width="210" x="700" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="P6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="6.0&lt;br&gt;Catat Pembayaran" vertex="1">
+          <mxGeometry height="90" width="210" x="1070" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="P7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="7.0&lt;br&gt;Buat Laporan Transaksi" vertex="1">
+          <mxGeometry height="90" width="210" x="700" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D1&lt;br&gt;Akun Petugas" vertex="1">
+          <mxGeometry height="65" width="220" x="1510" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="D2" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D2&lt;br&gt;Pelanggan" vertex="1">
+          <mxGeometry height="65" width="220" x="1510" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D3&lt;br&gt;Layanan" vertex="1">
+          <mxGeometry height="65" width="220" x="1510" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="D4" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D4&lt;br&gt;Pesanan dan Detail" vertex="1">
+          <mxGeometry height="65" width="220" x="1510" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="D5" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D5&lt;br&gt;Pembayaran" vertex="1">
+          <mxGeometry height="65" width="220" x="1510" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="D6" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D6&lt;br&gt;Riwayat Status" vertex="1">
+          <mxGeometry height="65" width="220" x="1510" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="e01" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P1" value="Data login">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="180" />
+              <mxPoint x="260" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e02" edge="1" parent="1" source="E2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P1" value="Data login dan akun petugas">
+          <mxGeometry relative="1" x="-0.1404" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="115" y="420" />
+              <mxPoint x="435" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e03" edge="1" parent="1" source="P1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E1" value="Hasil login dan menu">
+          <mxGeometry relative="1" x="-0.4969" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="360" y="270" />
+              <mxPoint x="60" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e04" edge="1" parent="1" source="P1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E2" value="Hasil login dan pengelolaan akun">
+          <mxGeometry relative="1" x="0.4444" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="230" y="210" />
+              <mxPoint x="230" y="380" />
+              <mxPoint x="60" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e05" edge="1" parent="1" source="P1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D1" value="Data akun / perubahan akun">
+          <mxGeometry relative="1" x="0.5019" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="300" />
+              <mxPoint x="1025" y="300" />
+              <mxPoint x="1025" y="260" />
+              <mxPoint x="1580" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e06" edge="1" parent="1" source="D1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P1" value="Informasi akun">
+          <mxGeometry relative="1" x="0.2079" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1610" y="270" />
+              <mxPoint x="460" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e07" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P2" value="Data pelanggan dan pencarian dari Kasir">
+          <mxGeometry relative="1" x="0.0322" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="120" />
+              <mxPoint x="750" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e08" edge="1" parent="1" source="E2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P2" value="Data pelanggan dan pencarian dari Pemilik">
+          <mxGeometry relative="1" x="-0.0404" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="140" y="650" />
+              <mxPoint x="670" y="650" />
+              <mxPoint x="670" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e09" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E1" value="Hasil pencarian / data pelanggan">
+          <mxGeometry relative="1" x="0.0306" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="80" />
+              <mxPoint x="115" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E2" value="Informasi pelanggan">
+          <mxGeometry relative="1" x="-0.2015" as="geometry">
+            <Array as="points">
+              <mxPoint x="805" y="100" />
+              <mxPoint x="12" y="100" />
+              <mxPoint x="12" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D2" value="Simpan / ubah data pelanggan">
+          <mxGeometry relative="1" x="-0.2051" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="880" y="110" />
+              <mxPoint x="1780" y="110" />
+              <mxPoint x="1780" y="312.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="D2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P2" value="Data pelanggan tersimpan">
+          <mxGeometry relative="1" x="-0.3379" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="990" y="310" />
+              <mxPoint x="990" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="E2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P3" value="Data layanan dan harga (input Pemilik)">
+          <mxGeometry relative="1" x="-0.2894" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="120" y="580" />
+              <mxPoint x="1010" y="580" />
+              <mxPoint x="1010" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E2" value="Hasil pengelolaan layanan">
+          <mxGeometry relative="1" x="-0.1905" as="geometry">
+            <Array as="points">
+              <mxPoint x="1175" y="60" />
+              <mxPoint x="2" y="60" />
+              <mxPoint x="2" y="507.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D3" value="Simpan / ubah layanan">
+          <mxGeometry relative="1" x="-0.0909" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1460" y="185" />
+              <mxPoint x="1460" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="D3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P3" value="Data layanan dan harga tersimpan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="400" />
+              <mxPoint x="1175" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P4" value="Data pesanan, jumlah, catatan, diskon">
+          <mxGeometry relative="1" x="0.3063" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="110" y="330" />
+              <mxPoint x="400" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="E3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P4" value="Informasi cucian / permintaan melalui Kasir">
+          <mxGeometry relative="1" x="0.0148" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="817.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="D2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P4" value="Data pelanggan untuk pesanan">
+          <mxGeometry relative="1" x="0.0517" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="460" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="D3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P4" value="Layanan, harga, estimasi">
+          <mxGeometry relative="1" x="-0.4892" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1540" y="560" />
+              <mxPoint x="480" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D4" value="Data pesanan dan detail">
+          <mxGeometry relative="1" x="0.5172" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="430" y="670" />
+              <mxPoint x="1570" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E1" value="Nota, total, estimasi selesai">
+          <mxGeometry relative="1" x="0.519" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="20" y="460" />
+              <mxPoint x="20" y="197.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E3" value="Nota melalui Kasir">
+          <mxGeometry relative="1" x="-0.4583" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="380" y="560" />
+              <mxPoint x="160" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P5" value="Nomor nota / pencarian dan status baru">
+          <mxGeometry relative="1" x="0.17" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="130" y="290" />
+              <mxPoint x="770" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="D4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P5" value="Data pesanan dan status">
+          <mxGeometry relative="1" x="0.1233" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="840" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="D5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P5" value="Informasi status pembayaran">
+          <mxGeometry relative="1" x="0.0628" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="740" />
+              <mxPoint x="950" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="1" source="P5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D4" value="Pembaruan status pesanan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="805" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" edge="1" parent="1" source="P5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D6" value="Riwayat perubahan status">
+          <mxGeometry relative="1" x="-0.0778" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="510" />
+              <mxPoint x="930" y="850" />
+              <mxPoint x="1620" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" edge="1" parent="1" source="P5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E1" value="Hasil pencarian dan status">
+          <mxGeometry relative="1" x="-0.2817" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="740" y="350" />
+              <mxPoint x="160" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e30" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P6" value="Data pembayaran">
+          <mxGeometry relative="1" x="0.1076" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="80" y="250" />
+              <mxPoint x="1130" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31" edge="1" parent="1" source="D4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P6" value="Total pesanan">
+          <mxGeometry relative="1" x="0.1243" as="geometry">
+            <Array as="points">
+              <mxPoint x="1220" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e32" edge="1" parent="1" source="D5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P6" value="Riwayat pembayaran">
+          <mxGeometry relative="1" x="-0.36" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1180" y="762.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" edge="1" parent="1" source="P6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D5" value="Data pembayaran baru">
+          <mxGeometry relative="1" x="-0.5911" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1770" y="510" />
+              <mxPoint x="1770" y="762.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e34" edge="1" parent="1" source="P6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E1" value="Sisa tagihan dan status lunas">
+          <mxGeometry relative="1" x="-0.0174" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="400" />
+              <mxPoint x="210" y="400" />
+              <mxPoint x="210" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" edge="1" parent="1" source="E2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P7" value="Permintaan laporan dan periode">
+          <mxGeometry relative="1" x="0.1955" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="100" y="610" />
+              <mxPoint x="770" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" edge="1" parent="1" source="D4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P7" value="Data pesanan">
+          <mxGeometry relative="1" x="-0.0879" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1600" y="720" />
+              <mxPoint x="805" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" edge="1" parent="1" source="D5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P7" value="Data pembayaran untuk laporan">
+          <mxGeometry relative="1" x="0.456" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1210" y="780" />
+              <mxPoint x="1210" y="805" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" edge="1" parent="1" source="P7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E2" value="Laporan transaksi">
+          <mxGeometry relative="1" x="0.0279" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="750" y="740" />
+              <mxPoint x="80" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="warning0" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Catatan pemodelan:&lt;/b&gt; Pelanggan bukan pengguna aplikasi; interaksi berlangsung melalui Kasir. Alur informasi Pelanggan pada diagram menunjukkan asal informasi pesanan, bukan akses langsung ke aplikasi." vertex="1">
+          <mxGeometry height="55" width="1650" x="40" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="e40" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P7" value="Permintaan laporan hari ini">
+          <mxGeometry relative="1" x="0.1516" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="220" y="190" />
+              <mxPoint x="220" y="712" />
+              <mxPoint x="735" y="712" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" edge="1" parent="1" source="P7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E1" value="Laporan hari ini">
+          <mxGeometry relative="1" x="-0.3159" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="680" y="805" />
+              <mxPoint x="680" y="870" />
+              <mxPoint x="200" y="870" />
+              <mxPoint x="200" y="230" />
+              <mxPoint x="180" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" edge="1" parent="1" source="D6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P5" value="Riwayat status">
+          <mxGeometry relative="1" x="0.0008" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="965" />
+              <mxPoint x="940" y="965" />
+              <mxPoint x="940" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D6" value="Riwayat status awal">
+          <mxGeometry relative="1" x="0.044" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="700" />
+              <mxPoint x="1470" y="700" />
+              <mxPoint x="1470" y="912.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="DFD Level 1 - Proses 4.0" id="QDvLpsDMrQD8kllo26_J">
+    <mxGraphModel dx="1260" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;align=center;" value="DFD LEVEL 1 — 4.0 PROSES PESANAN DAN NOTA" vertex="1">
+          <mxGeometry height="40" width="1050" x="420" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="Penguraian proses 4.0 menjadi enam subproses" vertex="1">
+          <mxGeometry height="28" width="700" x="600" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="E1L" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Kasir" vertex="1">
+          <mxGeometry height="60" width="150" x="40" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="E3L" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Pelanggan" vertex="1">
+          <mxGeometry height="60" width="150" x="40" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="E1R" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Kasir" vertex="1">
+          <mxGeometry height="60" width="150" x="1730" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="E3R" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Pelanggan" vertex="1">
+          <mxGeometry height="60" width="150" x="1730" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="P41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="4.1&lt;br&gt;Terima Data Pesanan" vertex="1">
+          <mxGeometry height="95" width="230" x="330" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="P42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="4.2&lt;br&gt;Validasi Data Pelanggan" vertex="1">
+          <mxGeometry height="95" width="230" x="690" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="P43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="4.3&lt;br&gt;Ambil Data Layanan dan Harga" vertex="1">
+          <mxGeometry height="95" width="230" x="690" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="P44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="4.4&lt;br&gt;Hitung Total, Diskon,&lt;br&gt;dan Estimasi Selesai" vertex="1">
+          <mxGeometry height="95" width="230" x="1080" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="P45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="4.5&lt;br&gt;Buat Nomor Nota dan&lt;br&gt;Simpan Pesanan" vertex="1">
+          <mxGeometry height="95" width="230" x="1430" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="P46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="4.6&lt;br&gt;Cetak Nota" vertex="1">
+          <mxGeometry height="95" width="230" x="1430" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="D2L" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D2&lt;br&gt;Pelanggan" vertex="1">
+          <mxGeometry height="70" width="220" x="700" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="D3L" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D3&lt;br&gt;Layanan" vertex="1">
+          <mxGeometry height="70" width="220" x="1080" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="D4L" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D4&lt;br&gt;Pesanan dan Detail" vertex="1">
+          <mxGeometry height="70" width="250" x="1460" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="l01" edge="1" parent="1" source="E1L" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P41" value="Data pesanan, jumlah, catatan, diskon">
+          <mxGeometry relative="1" x="0.088" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l02" edge="1" parent="1" source="E3L" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P41" value="Informasi cucian / permintaan melalui Kasir">
+          <mxGeometry relative="1" x="0.4727" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l03" edge="1" parent="1" source="P41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P42" value="Data pelanggan untuk validasi">
+          <mxGeometry relative="1" x="-0.039" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="180" />
+              <mxPoint x="805" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l05" edge="1" parent="1" source="D2L" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P42" value="Data pelanggan tersimpan">
+          <mxGeometry relative="1" x="-0.0633" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="810" y="680" />
+              <mxPoint x="970" y="680" />
+              <mxPoint x="970" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l06" edge="1" parent="1" source="P42" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P44" value="Data pelanggan valid">
+          <mxGeometry relative="1" x="-0.1579" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1170" y="247.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l07" edge="1" parent="1" source="P41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P43" value="Pilihan layanan dan jumlah">
+          <mxGeometry relative="1" x="-0.0178" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="330" />
+              <mxPoint x="780" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l09" edge="1" parent="1" source="D3L" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P43" value="Harga dan estimasi layanan">
+          <mxGeometry relative="1" x="-0.3877" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1190" y="960" />
+              <mxPoint x="660" y="960" />
+              <mxPoint x="660" y="547.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l10" edge="1" parent="1" source="P43" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P44" value="Data layanan, harga dan estimasi">
+          <mxGeometry relative="1" x="-0.195" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l11" edge="1" parent="1" source="P44" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P45" value="Hasil perhitungan, estimasi, dan catatan">
+          <mxGeometry relative="1" x="0.0286" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1250" y="290" />
+              <mxPoint x="1520" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l12" edge="1" parent="1" source="P45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D4L" value="Nomor nota dan data pesanan beserta detail">
+          <mxGeometry relative="1" x="0.4889" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1545" y="310" />
+              <mxPoint x="1940" y="310" />
+              <mxPoint x="1940" y="1015" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l13" edge="1" parent="1" source="P45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P46" value="Data nota, total, estimasi selesai">
+          <mxGeometry relative="1" x="-0.1346" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="470" />
+              <mxPoint x="1510" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l14" edge="1" parent="1" source="P46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E1R" value="Nota, total, estimasi selesai">
+          <mxGeometry relative="1" x="-0.4568" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1545" y="770" />
+              <mxPoint x="1910" y="770" />
+              <mxPoint x="1910" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l15" edge="1" parent="1" source="P46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="E3R" value="Nota melalui Kasir">
+          <mxGeometry relative="1" x="0.0333" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1545" y="620" />
+              <mxPoint x="1805" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Asumsi:&lt;/b&gt; Validasi pelanggan mengacu pada D2. Jika pelanggan baru, data pelanggan perlu dibuat melalui proses 2.0 Kelola Data Pelanggan sebelum pesanan dilanjutkan. Diskon diisi Kasir sebagai potongan nominal rupiah (B-07), dan total = subtotal - diskon.." vertex="1">
+          <mxGeometry height="65" width="1380" x="30" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="note12" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Keseimbangan:&lt;/b&gt; Input/output utama proses 4.0 dipertahankan: data pesanan dari Kasir, referensi D2 dan D3, penyimpanan ke D4, serta nota/total/estimasi kembali ke Kasir dan nota diteruskan kepada Pelanggan melalui Kasir." vertex="1">
+          <mxGeometry height="65" width="1750" x="30" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="l16" edge="1" parent="1" source="P41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="P44" value="Diskon dan jumlah">
+          <mxGeometry relative="1" x="-0.002" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="150" />
+              <mxPoint x="1210" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6L" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="D6&lt;br&gt;Riwayat Status" vertex="1">
+          <mxGeometry height="70" width="250" x="1460" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="l17" edge="1" parent="1" source="P45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#FFFFFF;" target="D6L" value="Riwayat status awal">
+          <mxGeometry relative="1" x="0.2668" as="geometry">
+            <Array as="points">
+              <mxPoint x="1380" y="377.5" />
+              <mxPoint x="1380" y="1145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
